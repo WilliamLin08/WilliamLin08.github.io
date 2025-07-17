@@ -839,11 +839,11 @@
       function loadWaline() {
         init({
           el: '#waline',
-          serverURL: 'https://waline-comment-system.vercel.app',
+          serverURL: 'https://waline.js.org',
           dark: 'body[class~="dark-mode"]',
-          reaction: false,
+          reaction: true,
           requiredMeta: ['nick', 'mail'],
-          emoji: [],
+          emoji: ['https://unpkg.com/@waline/emojis@1.2.0/weibo'],
                     lang: 'zh-CN',
         });
       }
