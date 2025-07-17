@@ -1,0 +1,4 @@
+/* 将主要内容区域和侧边栏卡片设置为半透明背景 */
+#main-content, #aside-content .card-widget {
+  background: rgba(255, 255, 255, 0.85) !important;
+}
