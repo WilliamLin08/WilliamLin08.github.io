@@ -46,96 +46,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Chemistry Experiment - Tea Polyphenol Content Analysis in Different Tea Varieties</title>
-    <url>/2024/12/19/chemistry-experiment-tea-polyphenol-analysis/</url>
-    <content><![CDATA[<h1 id="Chemistry-Experiment-Tea-Polyphenol-Content-Analysis-in-Different-Tea-Varieties-🍃"><a href="#Chemistry-Experiment-Tea-Polyphenol-Content-Analysis-in-Different-Tea-Varieties-🍃" class="headerlink" title="Chemistry Experiment: Tea Polyphenol Content Analysis in Different Tea Varieties 🍃"></a>Chemistry Experiment: Tea Polyphenol Content Analysis in Different Tea Varieties 🍃</h1><p>Hello everyone, I’m William, a high school student who loves doing chemistry experiments.</p>
-<p><strong>As a native of Hangzhou</strong>, if someone asks me what my hometown tastes like, my answer has always been certain:</p>
-<p>“It’s the taste of the first brew of West Lake Longjing in spring.”</p>
-<h2 id="The-Question-Is-West-Lake-Longjing-Worth-Its-Price-💰"><a href="#The-Question-Is-West-Lake-Longjing-Worth-Its-Price-💰" class="headerlink" title="The Question: Is West Lake Longjing Worth Its Price? 💰"></a>The Question: Is West Lake Longjing Worth Its Price? 💰</h2><p>West Lake Longjing, known as the “Queen of Green Tea,” carries deep historical and cultural significance. Since ancient times, it has been a symbol of Jiangnan elegance.</p>
-<p>Many people’s most direct question is about price: Why is it so expensive? Is it really worth the money?</p>
-<p>And most crucially, regarding actual strength: In today’s world, when it comes to nutritional content and actual efficacy, does it still have advantages compared to other premium teas?</p>
-<p>These practical questions have made “West Lake Longjing” seem to gradually transform from a synonym for quality into a controversial symbol in some people’s eyes.</p>
-<p>Facing these questions, talking only about culture and sentiment seems somewhat pale and powerless. We need an objective, scientific ruler to re-measure its value.</p>
-<p><strong>And this ruler is - Tea Polyphenols!</strong></p>
-<h2 id="The-Science-Behind-Tea-Polyphenols-🔬"><a href="#The-Science-Behind-Tea-Polyphenols-🔬" class="headerlink" title="The Science Behind Tea Polyphenols 🔬"></a>The Science Behind Tea Polyphenols 🔬</h2><p>You should be familiar with this term. Simply put, tea’s unique flavors - like freshness and astringency - as well as its widely known health benefits, are all closely related to this core substance. Tea polyphenols are the core functional components of various teas, with antioxidant and anti-aging effects. Accurately measuring their content is crucial for evaluating tea quality and developing health products.</p>
-<p>So, what is West Lake Longjing’s actual strength?</p>
-<h2 id="Experimental-Design-📊"><a href="#Experimental-Design-📊" class="headerlink" title="Experimental Design 📊"></a>Experimental Design 📊</h2><p>I decided to start a scientific investigation through chemical methods!</p>
-<p>In this video, we will use the most rigorous experiments and the most intuitive data to directly respond to all previous questions.</p>
-<p>First, we collected eight tea varieties:</p>
-<ul>
-<li>High-priced West Lake Longjing</li>
-<li>Da Hong Pao</li>
-<li>Xiangxi Green Tea</li>
-<li>Lower-priced Hangzhou Longjing</li>
-<li>Qimen Black Tea</li>
-<li>Shantou Green Tea</li>
-<li>Huangshan Green Tea</li>
-<li>Fujian Green Tea</li>
-</ul>
-<p>Today, we entered the laboratory to measure the tea polyphenol content of these teas using High-Performance Liquid Chromatography (HPLC) technology.</p>
-<h2 id="HPLC-Methodology-🧪"><a href="#HPLC-Methodology-🧪" class="headerlink" title="HPLC Methodology 🧪"></a>HPLC Methodology 🧪</h2><p>Let me first introduce High-Performance Liquid Chromatography:</p>
-<p>We need to know that tea leaf extract is a mixture, with EGCG being the main component we want to measure in this experiment.</p>
-<p>HPLC’s first task is to separate them - this process is called ‘separation.’</p>
-<p>The core of HPLC is a tube called a ‘chromatographic column,’ filled with special analytical material called the ‘stationary phase.’</p>
-<p>Once the experiment begins, a specific liquid - the ‘mobile phase’ - continuously pushes our sample through this chromatographic column.</p>
-<p>Here’s the key: when the sample flows through the column, different molecules interact with the ‘stationary phase’ material at different intensities. Some molecules experience strong attraction and move slowly; others experience weak attraction and are quickly carried forward by the ‘mobile phase.’</p>
-<p>Due to this speed difference, originally mixed molecules are separated and eventually flow out of the column one after another.</p>
-<p>The second step is <strong>detection</strong>.</p>
-<p>At the column exit, a <strong>UV detector</strong> waits, emitting 278-nanometer wavelength UV light to illuminate the flowing liquid. Tea polyphenol molecules have strong absorption characteristics for this wavelength.</p>
-<p>So when tea polyphenols flow through the detector, they absorb some light, generating a signal. The higher the concentration of these molecules in the sample, the more light absorbed, and the stronger the signal generated.</p>
-<p>Finally, the computer plots these signals of varying strengths into a spectrum. Each ‘peak’ on the graph represents a separated component, and the peak size (area) directly tells us the accurate content of that component.</p>
-<p><strong>Simply put, HPLC first separates mixtures through speed differences, then measures their quantities one by one.</strong></p>
-<h2 id="Experimental-Process-🔬"><a href="#Experimental-Process-🔬" class="headerlink" title="Experimental Process 🔬"></a>Experimental Process 🔬</h2><h3 id="Sample-Processing"><a href="#Sample-Processing" class="headerlink" title="Sample Processing"></a>Sample Processing</h3><p>To measure tea polyphenol EGCG content, the first step is sample preprocessing, aiming to effectively extract tea polyphenols from tea leaves.</p>
-<p>First, we ground tea leaves into powder and precisely weighed 0.2 grams using an analytical balance.</p>
-<p>Then, we added 10 mL of 75% ethanol solution.</p>
-<p>Finally, we took the supernatant and filtered it through microporous filter membranes to remove tiny particles and prevent instrument clogging. Now we have pure tea leaf sample solution for analysis.</p>
-<h3 id="Standard-Curve"><a href="#Standard-Curve" class="headerlink" title="Standard Curve"></a>Standard Curve</h3><p>Before measuring unknown concentration tea samples, we must first perform a step called ‘plotting standard curve’ - this is the foundation ensuring our quantitative accuracy.</p>
-<p>We prepared a series of tea polyphenol standard solutions with completely known concentrations: 50, 200, 400, 600, 800, 1000 μg&#x2F;mL, etc. Then we injected these standard solutions into HPLC sequentially, measuring their corresponding signal peak areas.</p>
-<p>By plotting concentration as x-axis and peak area as y-axis, we obtained a straight line and its mathematical regression equation: <strong>y &#x3D; 5.6696x - 40.77</strong>. The R² value is 0.9914, very close to 1, indicating this conversion relationship is very reliable.</p>
-<h3 id="Instrumental-Analysis"><a href="#Instrumental-Analysis" class="headerlink" title="Instrumental Analysis"></a>Instrumental Analysis</h3><p>With all preparations complete, we began formal analysis. We placed eight processed tea samples into the HPLC autosampler.</p>
-<p>The instrument automatically and precisely extracted each sample according to preset programs and injected them into the analysis system. As explained earlier, various components in samples are separated in the chromatographic column, then recorded one by one by the detector.</p>
-<h2 id="Results-and-Analysis-📈"><a href="#Results-and-Analysis-📈" class="headerlink" title="Results and Analysis 📈"></a>Results and Analysis 📈</h2><p>All sample instrumental analyses are complete. Through HPLC determination and calculation based on the previously established standard curve, we obtained specific tea polyphenol concentrations in eight tea samples:</p>
-<p><strong>Processed Tea Varieties:</strong></p>
-<ul>
-<li>Da Hong Pao (Sample #2): 224.7 mg&#x2F;L</li>
-<li>Qimen Black Tea (Sample #5): 257.2 mg&#x2F;L</li>
-</ul>
-<p><strong>Green Tea Varieties:</strong></p>
-<ul>
-<li>Fujian Green Tea (Sample #8): 283.0 mg&#x2F;L</li>
-<li>Hangzhou Longjing (Sample #4): 370.7 mg&#x2F;L</li>
-<li>Shantou Green Tea (Sample #6): 593.5 mg&#x2F;L</li>
-<li>Mystery Valley Golden Green Tea (Sample #3): 856.9 mg&#x2F;L</li>
-<li>Huangshan Green Tea (Sample #7): 891.3 mg&#x2F;L</li>
-</ul>
-<p><strong>Special Note - West Lake Longjing:</strong><br>Sample #1 ‘West Lake Longjing’ had initial tea polyphenol concentration significantly exceeding the instrument’s optimal linear detection range, so we performed necessary dilution according to protocol. Based on the diluted concentration measured by the instrument and multiplying by the corresponding dilution factor, we calculated its original tea polyphenol concentration as <strong>2822.4 mg&#x2F;L</strong>.</p>
-<h2 id="Key-Findings-🎯"><a href="#Key-Findings-🎯" class="headerlink" title="Key Findings 🎯"></a>Key Findings 🎯</h2><p>The quantitative results clearly show: Sample #1 ‘West Lake Longjing’ has tea polyphenol content significantly higher than all other tested samples. This value is approximately 3.2 times that of ‘Huangshan Green Tea’ (the second highest) and about 7.6 times that of ‘Hangzhou Longjing’ (Sample #4).</p>
-<p>The data clearly reveals that different teas, especially different quality grades of the same tea type, can have order-of-magnitude differences in core chemical component content.</p>
-<h2 id="Analysis-and-Recommendations-💡"><a href="#Analysis-and-Recommendations-💡" class="headerlink" title="Analysis and Recommendations 💡"></a>Analysis and Recommendations 💡</h2><p>This experiment’s core finding is that the same West Lake Longjing - our deliberately selected high-priced sample versus another affordable sample - showed vastly different content in the core effective component, tea polyphenol EGCG. The high-priced West Lake Longjing not only had the highest concentration among all samples but was several times higher than the affordable Longjing sample.</p>
-<p>What causes this? This is usually directly related to <strong>raw material grade, harvesting time, growing environment, and production techniques</strong>. For example, high-grade Longjing is typically harvested in early spring when tea tree buds have accumulated nutrients throughout winter, making their tea polyphenols and amino acids most abundant. Meanwhile, top-tier tea-making techniques minimize the loss of these active substances during processing.</p>
-<p>Based on these findings, I offer three recommendations:</p>
-<p><strong>First, clarify needs and choose rationally.</strong> If you drink tea mainly for flavor enjoyment and relaxation, any qualified tea meeting safety standards will satisfy you. But if, like us, you view tea drinking as a health investment hoping to maximize tea polyphenol and other antioxidant components, this experiment clearly points to: <strong>Under economically feasible conditions, choosing certified, high-quality West Lake Longjing from core production areas may provide higher effective component returns.</strong></p>
-<p><strong>Second, learn to distinguish and focus on origin.</strong> Since quality is so closely related to origin, we cannot just look at price when purchasing. Try to buy through reputable brands or merchants and actively pay attention to product origin information. Genuine West Lake Longjing has geographical indication protection - look for relevant certifications and anti-counterfeiting marks when purchasing.</p>
-<p><strong>Third, proper storage preserves nutrition.</strong> Even with top-grade tea, improper storage will cause tea polyphenols to rapidly degrade due to light, high temperature, humidity, and oxidation. The correct approach is storing tea in opaque, well-sealed containers in cool, dry, dark places. This maximizes preservation of the health value we paid for.</p>
-<p>In conclusion, through this complete experiment from sample processing to data analysis, we hope everyone can make rational tea purchases.</p>
-<hr>
-<p><strong>Video Link</strong>: <a class="link"   href="https://www.bilibili.com/video/BV1MaguzUEtC/?spm_id_from=333.1387.homepage.video_card.click&vd_source=fb959c65b3d18a5cf7cc84a64cdd8ad5" >Chemistry Experiment Testing Effective Components in Tea<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p><em>Science reveals truth, data speaks louder than words! 🔬🍃</em></p>
-]]></content>
-      <categories>
-        <category>My BiliBili Sharing</category>
-      </categories>
-      <tags>
-        <tag>Chemistry</tag>
-        <tag>Experiment</tag>
-        <tag>HPLC</tag>
-        <tag>Scientific Analysis</tag>
-        <tag>Tea</tag>
-        <tag>Tea Polyphenols</tag>
-        <tag>West Lake Longjing</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Labubu天价大揭秘：一场被&quot;化学公式&quot;操控的疯狂购物派对！</title>
     <url>/2024/12/19/labubu-chemistry-analysis/</url>
     <content><![CDATA[<h1 id="Labubu天价大揭秘：一场被”化学公式”操控的疯狂购物派对！🧪💰"><a href="#Labubu天价大揭秘：一场被”化学公式”操控的疯狂购物派对！🧪💰" class="headerlink" title="Labubu天价大揭秘：一场被”化学公式”操控的疯狂购物派对！🧪💰"></a>Labubu天价大揭秘：一场被”化学公式”操控的疯狂购物派对！🧪💰</h1><p>嘿，各位实验室预备役！最近被Labubu那个丑萌小怪物刷屏了吧？动辄上万的价格，看得人下巴都掉了！作为一个化学爱好者，我在这股狂热风暴里，居然闻到了熟悉的”实验室味道”——这哪是买玩具，分明就是一场精心设计的超大型”化学反应”！</p>
@@ -248,6 +158,116 @@
         <tag>Chemistry Experiments</tag>
         <tag>Video Creation</tag>
         <tag>Scientific Exploration</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Chemistry Experiment - Tea Polyphenol Content Analysis in Different Tea Varieties</title>
+    <url>/2024/12/19/chemistry-experiment-tea-polyphenol-analysis/</url>
+    <content><![CDATA[<h1 id="Chemistry-Experiment-Tea-Polyphenol-Content-Analysis-in-Different-Tea-Varieties-🍃"><a href="#Chemistry-Experiment-Tea-Polyphenol-Content-Analysis-in-Different-Tea-Varieties-🍃" class="headerlink" title="Chemistry Experiment: Tea Polyphenol Content Analysis in Different Tea Varieties 🍃"></a>Chemistry Experiment: Tea Polyphenol Content Analysis in Different Tea Varieties 🍃</h1><p>Hello everyone, I’m William, a high school student who loves doing chemistry experiments.</p>
+<p><strong>As a native of Hangzhou</strong>, if someone asks me what my hometown tastes like, my answer has always been certain:</p>
+<p>“It’s the taste of the first brew of West Lake Longjing in spring.”</p>
+<h2 id="The-Question-Is-West-Lake-Longjing-Worth-Its-Price-💰"><a href="#The-Question-Is-West-Lake-Longjing-Worth-Its-Price-💰" class="headerlink" title="The Question: Is West Lake Longjing Worth Its Price? 💰"></a>The Question: Is West Lake Longjing Worth Its Price? 💰</h2><p>West Lake Longjing, known as the “Queen of Green Tea,” carries deep historical and cultural significance. Since ancient times, it has been a symbol of Jiangnan elegance.</p>
+<p>Many people’s most direct question is about price: Why is it so expensive? Is it really worth the money?</p>
+<p>And most crucially, regarding actual strength: In today’s world, when it comes to nutritional content and actual efficacy, does it still have advantages compared to other premium teas?</p>
+<p>These practical questions have made “West Lake Longjing” seem to gradually transform from a synonym for quality into a controversial symbol in some people’s eyes.</p>
+<p>Facing these questions, talking only about culture and sentiment seems somewhat pale and powerless. We need an objective, scientific ruler to re-measure its value.</p>
+<p><strong>And this ruler is - Tea Polyphenols!</strong></p>
+<h2 id="The-Science-Behind-Tea-Polyphenols-🔬"><a href="#The-Science-Behind-Tea-Polyphenols-🔬" class="headerlink" title="The Science Behind Tea Polyphenols 🔬"></a>The Science Behind Tea Polyphenols 🔬</h2><p>You should be familiar with this term. Simply put, tea’s unique flavors - like freshness and astringency - as well as its widely known health benefits, are all closely related to this core substance. Tea polyphenols are the core functional components of various teas, with antioxidant and anti-aging effects. Accurately measuring their content is crucial for evaluating tea quality and developing health products.</p>
+<p>So, what is West Lake Longjing’s actual strength?</p>
+<h2 id="Experimental-Design-📊"><a href="#Experimental-Design-📊" class="headerlink" title="Experimental Design 📊"></a>Experimental Design 📊</h2><p>I decided to start a scientific investigation through chemical methods!</p>
+<p>In this video, we will use the most rigorous experiments and the most intuitive data to directly respond to all previous questions.</p>
+<p>First, we collected eight tea varieties:</p>
+<ul>
+<li>High-priced West Lake Longjing</li>
+<li>Da Hong Pao</li>
+<li>Xiangxi Green Tea</li>
+<li>Lower-priced Hangzhou Longjing</li>
+<li>Qimen Black Tea</li>
+<li>Shantou Green Tea</li>
+<li>Huangshan Green Tea</li>
+<li>Fujian Green Tea</li>
+</ul>
+<p>Today, we entered the laboratory to measure the tea polyphenol content of these teas using High-Performance Liquid Chromatography (HPLC) technology.</p>
+<h2 id="HPLC-Methodology-🧪"><a href="#HPLC-Methodology-🧪" class="headerlink" title="HPLC Methodology 🧪"></a>HPLC Methodology 🧪</h2><p>Let me first introduce High-Performance Liquid Chromatography:</p>
+<p>We need to know that tea leaf extract is a mixture, with EGCG being the main component we want to measure in this experiment.</p>
+<p>HPLC’s first task is to separate them - this process is called ‘separation.’</p>
+<p>The core of HPLC is a tube called a ‘chromatographic column,’ filled with special analytical material called the ‘stationary phase.’</p>
+<p>Once the experiment begins, a specific liquid - the ‘mobile phase’ - continuously pushes our sample through this chromatographic column.</p>
+<p>Here’s the key: when the sample flows through the column, different molecules interact with the ‘stationary phase’ material at different intensities. Some molecules experience strong attraction and move slowly; others experience weak attraction and are quickly carried forward by the ‘mobile phase.’</p>
+<p>Due to this speed difference, originally mixed molecules are separated and eventually flow out of the column one after another.</p>
+<p>The second step is <strong>detection</strong>.</p>
+<p>At the column exit, a <strong>UV detector</strong> waits, emitting 278-nanometer wavelength UV light to illuminate the flowing liquid. Tea polyphenol molecules have strong absorption characteristics for this wavelength.</p>
+<p>So when tea polyphenols flow through the detector, they absorb some light, generating a signal. The higher the concentration of these molecules in the sample, the more light absorbed, and the stronger the signal generated.</p>
+<p>Finally, the computer plots these signals of varying strengths into a spectrum. Each ‘peak’ on the graph represents a separated component, and the peak size (area) directly tells us the accurate content of that component.</p>
+<p><strong>Simply put, HPLC first separates mixtures through speed differences, then measures their quantities one by one.</strong></p>
+<h2 id="Experimental-Process-🔬"><a href="#Experimental-Process-🔬" class="headerlink" title="Experimental Process 🔬"></a>Experimental Process 🔬</h2><h3 id="Sample-Processing"><a href="#Sample-Processing" class="headerlink" title="Sample Processing"></a>Sample Processing</h3><p>To measure tea polyphenol EGCG content, the first step is sample preprocessing, aiming to effectively extract tea polyphenols from tea leaves.</p>
+<p>First, we ground tea leaves into powder and precisely weighed 0.2 grams using an analytical balance.</p>
+<p>Then, we added 10 mL of 75% ethanol solution.</p>
+<p>Finally, we took the supernatant and filtered it through microporous filter membranes to remove tiny particles and prevent instrument clogging. Now we have pure tea leaf sample solution for analysis.</p>
+<h3 id="Standard-Curve"><a href="#Standard-Curve" class="headerlink" title="Standard Curve"></a>Standard Curve</h3><p>Before measuring unknown concentration tea samples, we must first perform a step called ‘plotting standard curve’ - this is the foundation ensuring our quantitative accuracy.</p>
+<p>We prepared a series of tea polyphenol standard solutions with completely known concentrations: 50, 200, 400, 600, 800, 1000 μg&#x2F;mL, etc. Then we injected these standard solutions into HPLC sequentially, measuring their corresponding signal peak areas.</p>
+<p>By plotting concentration as x-axis and peak area as y-axis, we obtained a straight line and its mathematical regression equation: <strong>y &#x3D; 5.6696x - 40.77</strong>. The R² value is 0.9914, very close to 1, indicating this conversion relationship is very reliable.</p>
+<h3 id="Instrumental-Analysis"><a href="#Instrumental-Analysis" class="headerlink" title="Instrumental Analysis"></a>Instrumental Analysis</h3><p>With all preparations complete, we began formal analysis. We placed eight processed tea samples into the HPLC autosampler.</p>
+<p>The instrument automatically and precisely extracted each sample according to preset programs and injected them into the analysis system. As explained earlier, various components in samples are separated in the chromatographic column, then recorded one by one by the detector.</p>
+<h2 id="Results-and-Analysis-📈"><a href="#Results-and-Analysis-📈" class="headerlink" title="Results and Analysis 📈"></a>Results and Analysis 📈</h2><p>All sample instrumental analyses are complete. Through HPLC determination and calculation based on the previously established standard curve, we obtained specific tea polyphenol concentrations in eight tea samples:</p>
+<p><strong>Processed Tea Varieties:</strong></p>
+<ul>
+<li>Da Hong Pao (Sample #2): 224.7 mg&#x2F;L</li>
+<li>Qimen Black Tea (Sample #5): 257.2 mg&#x2F;L</li>
+</ul>
+<p><strong>Green Tea Varieties:</strong></p>
+<ul>
+<li>Fujian Green Tea (Sample #8): 283.0 mg&#x2F;L</li>
+<li>Hangzhou Longjing (Sample #4): 370.7 mg&#x2F;L</li>
+<li>Shantou Green Tea (Sample #6): 593.5 mg&#x2F;L</li>
+<li>Mystery Valley Golden Green Tea (Sample #3): 856.9 mg&#x2F;L</li>
+<li>Huangshan Green Tea (Sample #7): 891.3 mg&#x2F;L</li>
+</ul>
+<p><strong>Special Note - West Lake Longjing:</strong><br>Sample #1 ‘West Lake Longjing’ had initial tea polyphenol concentration significantly exceeding the instrument’s optimal linear detection range, so we performed necessary dilution according to protocol. Based on the diluted concentration measured by the instrument and multiplying by the corresponding dilution factor, we calculated its original tea polyphenol concentration as <strong>2822.4 mg&#x2F;L</strong>.</p>
+<h2 id="Key-Findings-🎯"><a href="#Key-Findings-🎯" class="headerlink" title="Key Findings 🎯"></a>Key Findings 🎯</h2><p>The quantitative results clearly show: Sample #1 ‘West Lake Longjing’ has tea polyphenol content significantly higher than all other tested samples. This value is approximately 3.2 times that of ‘Huangshan Green Tea’ (the second highest) and about 7.6 times that of ‘Hangzhou Longjing’ (Sample #4).</p>
+<p>The data clearly reveals that different teas, especially different quality grades of the same tea type, can have order-of-magnitude differences in core chemical component content.</p>
+<h2 id="Analysis-and-Recommendations-💡"><a href="#Analysis-and-Recommendations-💡" class="headerlink" title="Analysis and Recommendations 💡"></a>Analysis and Recommendations 💡</h2><p>This experiment’s core finding is that the same West Lake Longjing - our deliberately selected high-priced sample versus another affordable sample - showed vastly different content in the core effective component, tea polyphenol EGCG. The high-priced West Lake Longjing not only had the highest concentration among all samples but was several times higher than the affordable Longjing sample.</p>
+<p>What causes this? This is usually directly related to <strong>raw material grade, harvesting time, growing environment, and production techniques</strong>. For example, high-grade Longjing is typically harvested in early spring when tea tree buds have accumulated nutrients throughout winter, making their tea polyphenols and amino acids most abundant. Meanwhile, top-tier tea-making techniques minimize the loss of these active substances during processing.</p>
+<p>Based on these findings, I offer three recommendations:</p>
+<p><strong>First, clarify needs and choose rationally.</strong> If you drink tea mainly for flavor enjoyment and relaxation, any qualified tea meeting safety standards will satisfy you. But if, like us, you view tea drinking as a health investment hoping to maximize tea polyphenol and other antioxidant components, this experiment clearly points to: <strong>Under economically feasible conditions, choosing certified, high-quality West Lake Longjing from core production areas may provide higher effective component returns.</strong></p>
+<p><strong>Second, learn to distinguish and focus on origin.</strong> Since quality is so closely related to origin, we cannot just look at price when purchasing. Try to buy through reputable brands or merchants and actively pay attention to product origin information. Genuine West Lake Longjing has geographical indication protection - look for relevant certifications and anti-counterfeiting marks when purchasing.</p>
+<p><strong>Third, proper storage preserves nutrition.</strong> Even with top-grade tea, improper storage will cause tea polyphenols to rapidly degrade due to light, high temperature, humidity, and oxidation. The correct approach is storing tea in opaque, well-sealed containers in cool, dry, dark places. This maximizes preservation of the health value we paid for.</p>
+<p>In conclusion, through this complete experiment from sample processing to data analysis, we hope everyone can make rational tea purchases.</p>
+<hr>
+<p><strong>Video Link</strong>: <a class="link"   href="https://www.bilibili.com/video/BV1MaguzUEtC/?spm_id_from=333.1387.homepage.video_card.click&vd_source=fb959c65b3d18a5cf7cc84a64cdd8ad5" >Chemistry Experiment Testing Effective Components in Tea<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><em>Science reveals truth, data speaks louder than words! 🔬🍃</em></p>
+]]></content>
+      <categories>
+        <category>My BiliBili Sharing</category>
+      </categories>
+      <tags>
+        <tag>Chemistry</tag>
+        <tag>Experiment</tag>
+        <tag>HPLC</tag>
+        <tag>Scientific Analysis</tag>
+        <tag>Tea</tag>
+        <tag>Tea Polyphenols</tag>
+        <tag>West Lake Longjing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Coding for a Cause: Our Software Development Club at the 2025 Love Cube Charity Day</title>
+    <url>/2025/05/28/coding-for-a-cause-charity-day/</url>
+    <content><![CDATA[<p>This past May, I had the incredible opportunity to represent my Software Development Club at Pinghe’s third annual “Love Cube” Charity Day on May 28th. It was a day filled with joy, community, and the shared goal of making a difference. This year’s event was a collaboration with the Shanghai Pudong New Area Fudu School, aimed at supporting vocational training and sustainable employment for young people with intellectual disabilities.</p>
+<p>Our club decided to get creative with our fundraising efforts. We set up a booth to sell lottery tickets and were thrilled to see the enthusiastic response from fellow students, teachers, and parents. The energy at the event was amazing, with a bustling charity market during the day and a spectacular “Blazing Light” charity gala in the evening.</p>
+<p>I am incredibly proud to announce that through our lottery ticket sales, the Software Development Club raised ¥1356! This achievement placed us among the top five fundraising booths at the entire charity market. In total, the “Love Cube” Charity Day raised an impressive ¥40,732. All proceeds will be donated to the three vocational training workshops at the Fudu School, directly helping these talented young individuals build their professional skills.</p>
+<p>It was so inspiring to see our school community come together. From the energetic performances at the gala to the creative booths at the market, every part of the day was a testament to the power of collective action. Our club was honored to be a part of this meaningful event, using our passion for technology and problem-solving to contribute to a cause we care about. This experience has been a powerful reminder that we can all use our skills, no matter what they are, to create positive change.</p>
+<p>Thank you to everyone who bought a ticket from our booth and supported our efforts. We can’t wait to see how we can continue to code for a cause in the future!</p>
+]]></content>
+      <categories>
+        <category>charity</category>
+      </categories>
+      <tags>
+        <tag>Charity</tag>
+        <tag>Software Development</tag>
+        <tag>Community Service</tag>
+        <tag>School Activities</tag>
+        <tag>Fundraising</tag>
       </tags>
   </entry>
 </search>
