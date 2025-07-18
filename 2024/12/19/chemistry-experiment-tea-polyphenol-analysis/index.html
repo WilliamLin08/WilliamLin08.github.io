@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="chemistry, sports, campus, blog, student life">
+    
+    <meta name="author" content="William Lin">
+    
+    <!-- Completely eliminate flash of wrong theme -->
+    <script>
+        (function() {
+            const THEME_KEY = "REDEFINE-THEME-STATUS";
+            const DARK = "dark", LIGHT = "light";
+            
+            // Get preferred theme
+            function getTheme() {
+                try {
+                    const saved = localStorage.getItem(THEME_KEY);
+                    if (saved) {
+                        const { isDark } = JSON.parse(saved);
+                        return isDark ? DARK : LIGHT;
+                    }
+                } catch (e) {}
+                
+                return matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+            }
+            
+            // Apply theme to document
+            function applyTheme(theme) {
+                const isDark = theme === DARK;
+                const root = document.documentElement;
+                
+                // Set data attribute for CSS variables
+                root.setAttribute("data-theme", theme);
+                
+                // Set classes for compatibility
+                root.classList.add(theme);
+                root.classList.remove(isDark ? LIGHT : DARK);
+                root.style.colorScheme = theme;
+            }
+            
+            // Initial application
+            const theme = getTheme();
+            applyTheme(theme);
+            
+            // Listen for system preference changes
+            matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+                // Only update if using system preference (no localStorage entry)
+                if (!localStorage.getItem(THEME_KEY)) {
+                    applyTheme(matches ? DARK : LIGHT);
+                }
+            });
+            
+            // Set body classes once DOM is ready
+            if (document.readyState !== "loading") {
+                document.body.classList.add(theme + "-mode");
+            } else {
+                document.addEventListener("DOMContentLoaded", () => {
+                    document.body.classList.add(theme + "-mode");
+                    document.body.classList.remove((theme === DARK ? LIGHT : DARK) + "-mode");
+                });
+            }
+        })();
+    </script>
+    
+    <!-- Critical CSS to prevent flash -->
+    <style>
+        :root[data-theme="dark"] {
+            --background-color: #202124;
+            --background-color-transparent: rgba(32, 33, 36, 0.6);
+            --second-background-color: #2d2e32;
+            --third-background-color: #34353a;
+            --third-background-color-transparent: rgba(32, 33, 36, 0.6);
+            --primary-color: #0066CC;
+            --first-text-color: #ffffff;
+            --second-text-color: #eeeeee;
+            --third-text-color: #bebec6;
+            --fourth-text-color: #999999;
+            --default-text-color: #bebec6;
+            --invert-text-color: #373D3F;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --selection-color: #0066CC;
+            --shadow-color-1: rgba(255, 255, 255, 0.08);
+            --shadow-color-2: rgba(255, 255, 255, 0.05);
+        }
+        
+        :root[data-theme="light"] {
+            --background-color: #fff;
+            --background-color-transparent: rgba(255, 255, 255, 0.6);
+            --second-background-color: #f8f8f8;
+            --third-background-color: #f2f2f2;
+            --third-background-color-transparent: rgba(241, 241, 241, 0.6);
+            --primary-color: #0066CC;
+            --first-text-color: #16171a;
+            --second-text-color: #2f3037;
+            --third-text-color: #5e5e5e;
+            --fourth-text-color: #eeeeee;
+            --default-text-color: #373D3F;
+            --invert-text-color: #bebec6;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --selection-color: #0066CC;
+            --shadow-color-1: rgba(0, 0, 0, 0.08);
+            --shadow-color-2: rgba(0, 0, 0, 0.05);
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--default-text-color);
+        }
+        
+        /* Apply body classes as soon as DOM is ready */
+        :root[data-theme="dark"] body {
+            background-color: var(--background-color);
+            color: var(--default-text-color);
+        }
+    </style>
+    
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://WilliamLin08.github.io/2024/12/19/chemistry-experiment-tea-polyphenol-analysis/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chemistry Experiment - Tea Polyphenol Content Analysis in Different Tea Varieties">
+<meta property="og:url" content="https://williamlin08.github.io/2024/12/19/chemistry-experiment-tea-polyphenol-analysis/index.html">
+<meta property="og:site_name" content="William Lin&#39;s Blog">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://williamlin08.github.io/images/redefine-og.webp">
+<meta property="article:published_time" content="2024-12-19T03:00:00.000Z">
+<meta property="article:modified_time" content="2025-07-18T07:07:18.857Z">
+<meta property="article:author" content="William Lin">
+<meta property="article:tag" content="Chemistry">
+<meta property="article:tag" content="Experiment">
+<meta property="article:tag" content="HPLC">
+<meta property="article:tag" content="Scientific Analysis">
+<meta property="article:tag" content="Tea">
+<meta property="article:tag" content="Tea Polyphenols">
+<meta property="article:tag" content="West Lake Longjing">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://williamlin08.github.io/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            Chemistry Experiment - Tea Polyphenol Content Analysis in Different Tea Varieties | William Lin&#39;s Blog
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+        
+<script src="/js/build/libs/anime.min.js"></script>
+
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"williamlin08.github.io","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":true,"custom_message":"William Lin's Blog"},"side_tools":{"gear_rotation":true,"auto_expand":false},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"William Lin's Blog","subtitle":{"text":["Genius only means hard-working all one's life.——Mendeleyev"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/WilliamLin08","instagram":null,"zhihu":null,"twitter":null,"email":"williamlin35@outlook.com"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.5","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"About":{"path":"/about","icon":"fa-regular fa-user"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        William Lin&#39;s Blog
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({ loop: true })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [20, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                filter: ['blur(5px)', 'blur(0px)'],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 300 + 20 * i,
+            })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [0, -20],
+                opacity: [1, 0],
+                filter: ['blur(0px)', 'blur(5px)'],
+                easing: "easeInExpo",
+                duration: 1000,
+                delay: (el, i) => 15 * i,
+                complete: function() {
+                    hidePreloader();
+                }
+            }, '-=700');
+
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                William Lin&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories"
+                                        >
+                                    <i class="fa-regular fa-folder fa-fw"></i>
+                                    CATEGORIES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/about"
+                                        >
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    ABOUT
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories"
+                        >
+                            <span>
+                                CATEGORIES
+                            </span>
+                            
+                                <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/about"
+                        >
+                            <span>
+                                ABOUT
+                            </span>
+                            
+                                <i class="fa-regular fa-user fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">31</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">8</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Chemistry Experiment - Tea Polyphenol Content Analysis in Different Tea Varieties</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/images/redefine-avatar.svg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">William Lin</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv2</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-12-19 11:00</span>
+        <span class="mobile">2024-12-19 11:00</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-07-18 15:07:18</span>
+            <span class="mobile">2025-07-18 15:07:18</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Personal-Sharing/">Personal Sharing</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Chemistry/">Chemistry</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Experiment/">Experiment</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/HPLC/">HPLC</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Scientific-Analysis/">Scientific Analysis</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Tea/">Tea</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Tea-Polyphenols/">Tea Polyphenols</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/West-Lake-Longjing/">West Lake Longjing</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.5k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>9 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<h1 id="Chemistry-Experiment-Tea-Polyphenol-Content-Analysis-in-Different-Tea-Varieties-🍃"><a href="#Chemistry-Experiment-Tea-Polyphenol-Content-Analysis-in-Different-Tea-Varieties-🍃" class="headerlink" title="Chemistry Experiment: Tea Polyphenol Content Analysis in Different Tea Varieties 🍃"></a>Chemistry Experiment: Tea Polyphenol Content Analysis in Different Tea Varieties 🍃</h1><p>Hello everyone, I’m William, a high school student who loves doing chemistry experiments.</p>
+<p><strong>As a native of Hangzhou</strong>, if someone asks me what my hometown tastes like, my answer has always been certain:</p>
+<p>“It’s the taste of the first brew of West Lake Longjing in spring.”</p>
+<h2 id="The-Question-Is-West-Lake-Longjing-Worth-Its-Price-💰"><a href="#The-Question-Is-West-Lake-Longjing-Worth-Its-Price-💰" class="headerlink" title="The Question: Is West Lake Longjing Worth Its Price? 💰"></a>The Question: Is West Lake Longjing Worth Its Price? 💰</h2><p>West Lake Longjing, known as the “Queen of Green Tea,” carries deep historical and cultural significance. Since ancient times, it has been a symbol of Jiangnan elegance.</p>
+<p>Many people’s most direct question is about price: Why is it so expensive? Is it really worth the money?</p>
+<p>And most crucially, regarding actual strength: In today’s world, when it comes to nutritional content and actual efficacy, does it still have advantages compared to other premium teas?</p>
+<p>These practical questions have made “West Lake Longjing” seem to gradually transform from a synonym for quality into a controversial symbol in some people’s eyes.</p>
+<p>Facing these questions, talking only about culture and sentiment seems somewhat pale and powerless. We need an objective, scientific ruler to re-measure its value.</p>
+<p><strong>And this ruler is - Tea Polyphenols!</strong></p>
+<h2 id="The-Science-Behind-Tea-Polyphenols-🔬"><a href="#The-Science-Behind-Tea-Polyphenols-🔬" class="headerlink" title="The Science Behind Tea Polyphenols 🔬"></a>The Science Behind Tea Polyphenols 🔬</h2><p>You should be familiar with this term. Simply put, tea’s unique flavors - like freshness and astringency - as well as its widely known health benefits, are all closely related to this core substance. Tea polyphenols are the core functional components of various teas, with antioxidant and anti-aging effects. Accurately measuring their content is crucial for evaluating tea quality and developing health products.</p>
+<p>So, what is West Lake Longjing’s actual strength?</p>
+<h2 id="Experimental-Design-📊"><a href="#Experimental-Design-📊" class="headerlink" title="Experimental Design 📊"></a>Experimental Design 📊</h2><p>I decided to start a scientific investigation through chemical methods!</p>
+<p>In this video, we will use the most rigorous experiments and the most intuitive data to directly respond to all previous questions.</p>
+<p>First, we collected eight tea varieties:</p>
+<ul>
+<li>High-priced West Lake Longjing</li>
+<li>Da Hong Pao</li>
+<li>Xiangxi Green Tea</li>
+<li>Lower-priced Hangzhou Longjing</li>
+<li>Qimen Black Tea</li>
+<li>Shantou Green Tea</li>
+<li>Huangshan Green Tea</li>
+<li>Fujian Green Tea</li>
+</ul>
+<p>Today, we entered the laboratory to measure the tea polyphenol content of these teas using High-Performance Liquid Chromatography (HPLC) technology.</p>
+<h2 id="HPLC-Methodology-🧪"><a href="#HPLC-Methodology-🧪" class="headerlink" title="HPLC Methodology 🧪"></a>HPLC Methodology 🧪</h2><p>Let me first introduce High-Performance Liquid Chromatography:</p>
+<p>We need to know that tea leaf extract is a mixture, with EGCG being the main component we want to measure in this experiment.</p>
+<p>HPLC’s first task is to separate them - this process is called ‘separation.’</p>
+<p>The core of HPLC is a tube called a ‘chromatographic column,’ filled with special analytical material called the ‘stationary phase.’</p>
+<p>Once the experiment begins, a specific liquid - the ‘mobile phase’ - continuously pushes our sample through this chromatographic column.</p>
+<p>Here’s the key: when the sample flows through the column, different molecules interact with the ‘stationary phase’ material at different intensities. Some molecules experience strong attraction and move slowly; others experience weak attraction and are quickly carried forward by the ‘mobile phase.’</p>
+<p>Due to this speed difference, originally mixed molecules are separated and eventually flow out of the column one after another.</p>
+<p>The second step is <strong>detection</strong>.</p>
+<p>At the column exit, a <strong>UV detector</strong> waits, emitting 278-nanometer wavelength UV light to illuminate the flowing liquid. Tea polyphenol molecules have strong absorption characteristics for this wavelength.</p>
+<p>So when tea polyphenols flow through the detector, they absorb some light, generating a signal. The higher the concentration of these molecules in the sample, the more light absorbed, and the stronger the signal generated.</p>
+<p>Finally, the computer plots these signals of varying strengths into a spectrum. Each ‘peak’ on the graph represents a separated component, and the peak size (area) directly tells us the accurate content of that component.</p>
+<p><strong>Simply put, HPLC first separates mixtures through speed differences, then measures their quantities one by one.</strong></p>
+<h2 id="Experimental-Process-🔬"><a href="#Experimental-Process-🔬" class="headerlink" title="Experimental Process 🔬"></a>Experimental Process 🔬</h2><h3 id="Sample-Processing"><a href="#Sample-Processing" class="headerlink" title="Sample Processing"></a>Sample Processing</h3><p>To measure tea polyphenol EGCG content, the first step is sample preprocessing, aiming to effectively extract tea polyphenols from tea leaves.</p>
+<p>First, we ground tea leaves into powder and precisely weighed 0.2 grams using an analytical balance.</p>
+<p>Then, we added 10 mL of 75% ethanol solution.</p>
+<p>Finally, we took the supernatant and filtered it through microporous filter membranes to remove tiny particles and prevent instrument clogging. Now we have pure tea leaf sample solution for analysis.</p>
+<h3 id="Standard-Curve"><a href="#Standard-Curve" class="headerlink" title="Standard Curve"></a>Standard Curve</h3><p>Before measuring unknown concentration tea samples, we must first perform a step called ‘plotting standard curve’ - this is the foundation ensuring our quantitative accuracy.</p>
+<p>We prepared a series of tea polyphenol standard solutions with completely known concentrations: 50, 200, 400, 600, 800, 1000 μg&#x2F;mL, etc. Then we injected these standard solutions into HPLC sequentially, measuring their corresponding signal peak areas.</p>
+<p>By plotting concentration as x-axis and peak area as y-axis, we obtained a straight line and its mathematical regression equation: <strong>y &#x3D; 5.6696x - 40.77</strong>. The R² value is 0.9914, very close to 1, indicating this conversion relationship is very reliable.</p>
+<h3 id="Instrumental-Analysis"><a href="#Instrumental-Analysis" class="headerlink" title="Instrumental Analysis"></a>Instrumental Analysis</h3><p>With all preparations complete, we began formal analysis. We placed eight processed tea samples into the HPLC autosampler.</p>
+<p>The instrument automatically and precisely extracted each sample according to preset programs and injected them into the analysis system. As explained earlier, various components in samples are separated in the chromatographic column, then recorded one by one by the detector.</p>
+<h2 id="Results-and-Analysis-📈"><a href="#Results-and-Analysis-📈" class="headerlink" title="Results and Analysis 📈"></a>Results and Analysis 📈</h2><p>All sample instrumental analyses are complete. Through HPLC determination and calculation based on the previously established standard curve, we obtained specific tea polyphenol concentrations in eight tea samples:</p>
+<p><strong>Processed Tea Varieties:</strong></p>
+<ul>
+<li>Da Hong Pao (Sample #2): 224.7 mg&#x2F;L</li>
+<li>Qimen Black Tea (Sample #5): 257.2 mg&#x2F;L</li>
+</ul>
+<p><strong>Green Tea Varieties:</strong></p>
+<ul>
+<li>Fujian Green Tea (Sample #8): 283.0 mg&#x2F;L</li>
+<li>Hangzhou Longjing (Sample #4): 370.7 mg&#x2F;L</li>
+<li>Shantou Green Tea (Sample #6): 593.5 mg&#x2F;L</li>
+<li>Mystery Valley Golden Green Tea (Sample #3): 856.9 mg&#x2F;L</li>
+<li>Huangshan Green Tea (Sample #7): 891.3 mg&#x2F;L</li>
+</ul>
+<p><strong>Special Note - West Lake Longjing:</strong><br>Sample #1 ‘West Lake Longjing’ had initial tea polyphenol concentration significantly exceeding the instrument’s optimal linear detection range, so we performed necessary dilution according to protocol. Based on the diluted concentration measured by the instrument and multiplying by the corresponding dilution factor, we calculated its original tea polyphenol concentration as <strong>2822.4 mg&#x2F;L</strong>.</p>
+<h2 id="Key-Findings-🎯"><a href="#Key-Findings-🎯" class="headerlink" title="Key Findings 🎯"></a>Key Findings 🎯</h2><p>The quantitative results clearly show: Sample #1 ‘West Lake Longjing’ has tea polyphenol content significantly higher than all other tested samples. This value is approximately 3.2 times that of ‘Huangshan Green Tea’ (the second highest) and about 7.6 times that of ‘Hangzhou Longjing’ (Sample #4).</p>
+<p>The data clearly reveals that different teas, especially different quality grades of the same tea type, can have order-of-magnitude differences in core chemical component content.</p>
+<h2 id="Analysis-and-Recommendations-💡"><a href="#Analysis-and-Recommendations-💡" class="headerlink" title="Analysis and Recommendations 💡"></a>Analysis and Recommendations 💡</h2><p>This experiment’s core finding is that the same West Lake Longjing - our deliberately selected high-priced sample versus another affordable sample - showed vastly different content in the core effective component, tea polyphenol EGCG. The high-priced West Lake Longjing not only had the highest concentration among all samples but was several times higher than the affordable Longjing sample.</p>
+<p>What causes this? This is usually directly related to <strong>raw material grade, harvesting time, growing environment, and production techniques</strong>. For example, high-grade Longjing is typically harvested in early spring when tea tree buds have accumulated nutrients throughout winter, making their tea polyphenols and amino acids most abundant. Meanwhile, top-tier tea-making techniques minimize the loss of these active substances during processing.</p>
+<p>Based on these findings, I offer three recommendations:</p>
+<p><strong>First, clarify needs and choose rationally.</strong> If you drink tea mainly for flavor enjoyment and relaxation, any qualified tea meeting safety standards will satisfy you. But if, like us, you view tea drinking as a health investment hoping to maximize tea polyphenol and other antioxidant components, this experiment clearly points to: <strong>Under economically feasible conditions, choosing certified, high-quality West Lake Longjing from core production areas may provide higher effective component returns.</strong></p>
+<p><strong>Second, learn to distinguish and focus on origin.</strong> Since quality is so closely related to origin, we cannot just look at price when purchasing. Try to buy through reputable brands or merchants and actively pay attention to product origin information. Genuine West Lake Longjing has geographical indication protection - look for relevant certifications and anti-counterfeiting marks when purchasing.</p>
+<p><strong>Third, proper storage preserves nutrition.</strong> Even with top-grade tea, improper storage will cause tea polyphenols to rapidly degrade due to light, high temperature, humidity, and oxidation. The correct approach is storing tea in opaque, well-sealed containers in cool, dry, dark places. This maximizes preservation of the health value we paid for.</p>
+<p>In conclusion, through this complete experiment from sample processing to data analysis, we hope everyone can make rational tea purchases.</p>
+<hr>
+<p><strong>Video Link</strong>: <a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1MaguzUEtC/?spm_id_from=333.1387.homepage.video_card.click&vd_source=fb959c65b3d18a5cf7cc84a64cdd8ad5" >Chemistry Experiment Testing Effective Components in Tea<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><em>Science reveals truth, data speaks louder than words! 🔬🍃</em></p>
+
+		</div>
+
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Chemistry/">#Chemistry</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Experiment/">#Experiment</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/HPLC/">#HPLC</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Scientific-Analysis/">#Scientific Analysis</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Tea/">#Tea</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Tea-Polyphenols/">#Tea Polyphenols</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/West-Lake-Longjing/">#West Lake Longjing</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/2025/01/17/campus-life-introduction/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">Campus Life Introduction</span>
+						<span class="post-nav-item">Prev posts</span>
+					</span>
+				</a>
+			</div>
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2024/12/19/chemistry-experiment-puerarin-analysis/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">Chemistry Experiment - Puerarin Content Analysis in Kudzu Root Powder</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://waline.vercel.app',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: ['https://unpkg.com/@waline/emojis@1.2.0/weibo', 'https://unpkg.com/@waline/emojis@1.2.0/alus', 'https://unpkg.com/@waline/emojis@1.2.0/bilibili'],
+                    lang: 'zh-CN',
+          login: 'enable',
+          wordLimit: [0, 1000],
+          pageSize: 10,
+          meta: ['nick', 'mail', 'link'],
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">Chemistry Experiment - Tea Polyphenol Content Analysis in Different Tea Varieties</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chemistry-Experiment-Tea-Polyphenol-Content-Analysis-in-Different-Tea-Varieties-%F0%9F%8D%83"><span class="nav-text">Chemistry Experiment: Tea Polyphenol Content Analysis in Different Tea Varieties 🍃</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Question-Is-West-Lake-Longjing-Worth-Its-Price-%F0%9F%92%B0"><span class="nav-text">The Question: Is West Lake Longjing Worth Its Price? 💰</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Science-Behind-Tea-Polyphenols-%F0%9F%94%AC"><span class="nav-text">The Science Behind Tea Polyphenols 🔬</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Experimental-Design-%F0%9F%93%8A"><span class="nav-text">Experimental Design 📊</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HPLC-Methodology-%F0%9F%A7%AA"><span class="nav-text">HPLC Methodology 🧪</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Experimental-Process-%F0%9F%94%AC"><span class="nav-text">Experimental Process 🔬</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Processing"><span class="nav-text">Sample Processing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Standard-Curve"><span class="nav-text">Standard Curve</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Instrumental-Analysis"><span class="nav-text">Instrumental Analysis</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Results-and-Analysis-%F0%9F%93%88"><span class="nav-text">Results and Analysis 📈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Key-Findings-%F0%9F%8E%AF"><span class="nav-text">Key Findings 🎯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Analysis-and-Recommendations-%F0%9F%92%A1"><span class="nav-text">Analysis and Recommendations 💡</span></a></li></ol></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">William Lin</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        8 posts in total
+                    </span>
+                    
+                        <span>
+                            3.1k words in total
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.5</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Search..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	
+<script src="/js/build/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/build/utils.js" type="module"></script>
+
+<script src="/js/build/main.js" type="module"></script>
+
+<script src="/js/build/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/build/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/build/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/build/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/build/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/tools/runtime.js"></script>
+
+    
+<script src="/js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/build/libs/Typed.min.js"></script>
+
+  
+<script src="/js/build/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+<script src="/js/build/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="/js/build/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+
+	
+</body>
+
+</html>
