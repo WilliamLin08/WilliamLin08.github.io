@@ -2,3 +2,8 @@
 #main-content, #aside-content .card-widget {
   background: rgba(255, 255, 255, 0.85) !important;
 }
+
+/* 隐藏右侧侧边栏 */
+#aside-content {
+  display: none !important;
+}
